@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Berry's Forensics Lab</title>
 
-    <meta name="google-site-verification" content="d4XWNP-EfIWVIqIRId8xT19SuYEvYiOKuvIVsK5yI4s" />
+    <meta name="google-site-verification" content="d4XWNP-EflWVIql">
 
     <meta name="description" content="Official digital forensics training platform and cybersecurity analyst portal by only1berryfx.">
     <meta name="keywords" content="only1berryfx, Berry Forensics Lab, cybersecurity dashboard, only1berryfx github">
@@ -15,134 +17,138 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-      body {
-        background-color: #0b0f19; 
-        color: #e2e8f0;            
-        font-family: 'JetBrains Mono', monospace; 
-        padding: 40px 20px; 
-        margin: 0;
-      }
+        /* Global Reset: Applies base configurations across the entire browser viewport */
+        body {
+            background-color: #0b0f19; /* Deep cyber dark background */
+            color: #e2e8f0;            /* Off-white readable text color */
+            font-family: 'JetBrains Mono', monospace; /* Monospaced development font layout */
+            padding: 40px 20px;        /* Spacing surrounding your content layout */
+            margin: 0;                 /* Removes default browser edge-padding */
+        }
 
-      .profile-card {
-        background-color: #1e293b; 
-        max-width: 480px;          
-        width: 100%;               
-        margin: 40px auto;            
-        padding: 35px;             
-        border-radius: 16px;       
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); 
-        border: 1px solid #334155; 
-        display: flex;             
-        flex-direction: column;    
-        height: auto; 
-        box-sizing: border-box;                 
-      }
+        /* Container Blueprint: Creates the sleek central interface card layout */
+        .profile-card {
+            background-color: #1e293b; /* Dark slate background color for the profile box */
+            max-width: 480px;          /* Restricts the card from stretching too wide on large screens */
+            width: 100%;               /* Spans full-width automatically on small mobile devices */
+            margin: 40px auto;         /* Centers the card horizontally on your browser screen */
+            padding: 35px;             /* Interior breathing room around the texts */
+            border-radius: 16px;       /* Curves the outer corners of the card frame smoothly */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Adds drop-shadow depth behind the element */
+            border: 1px solid #334155; /* Subtle crisp border edge representing security tech */
+            display: flex;             /* Activates flexible box architecture layout management */
+            flex-direction: column;    /* Aligns all internal card elements vertically from top to bottom */
+            height: auto;              /* Lets the box expand naturally based on elements added inside */
+            box-sizing: border-box;    /* Ensures internal padding doesn't distort or widen our max-width calculations */
+        }
 
-      h1 {
-        color: #38bdf8;            
-        font-size: 24px;
-        margin-top: 0; 
-        margin-bottom: 5px;
-      }
+        /* Profile Header Component Styles */
+        h1 {
+            color: #38bdf8;            /* High-tech cyan blue color accent */
+            font-size: 24px;
+            margin: 0 0 10px 0;        /* Fine-tuned spacing control: only leaves space beneath the text */
+        }
 
-      h2 {
-        color: #94a3b8;
-        font-size: 14px;
-        line-height: 1.5;
-        font-weight: normal;
-        margin-bottom: 20px;
-      }
+        p {
+            color: #94a3b8;            /* Muted cool grey for background descriptions */
+            font-size: 14px;
+            line-height: 1.6;          /* Adjusts spacing between multi-line texts for clear readability */
+            margin: 0 0 20px 0;
+        }
 
-      p {
-        color: #cbd5e1;
-        font-size: 14px;
-        line-height: 1.6;
-        background: #0f172a;
-        padding: 15px;
-        border-radius: 8px;
-        border-left: 4px solid #38bdf8; 
-      }
+        h3 {
+            font-size: 16px;
+            color: #f1f5f9;
+            margin: 20px 0 10px 0;
+            border-bottom: 1px solid #334155; /* Section separator lines across the card interface */
+            padding-bottom: 5px;
+        }
 
-      h3 {
-        font-size: 16px;
-        color: #f43f5e; 
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
+        /* Unordered Lists Layout Configuration */
+        ul {
+            list-style: none;          /* Strips away default plain round browser bullet-points */
+            padding: 0;
+            margin: 0;
+        }
 
-      ul {
-        list-style: none; 
-        padding: 0;
-        margin: 0;
-      }
+        li {
+            font-size: 14px;
+            margin-bottom: 12px;       /* Separation spacing between listing points */
+            display: flex;             /* Micro-layout arrangement matching emoji vectors to text strings */
+            align-items: center;
+        }
 
-      li {
-        background-color: #0f172a;
-        padding: 14px 15px;
-        margin: 10px 0;
-        border-radius: 8px;
-        border: 1px solid #334155;
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-      }
+        /* Inline spacing padding for customized icons */
+        .emoji-icon {
+            margin-right: 10px;        /* Forces precise spacing between icons and structural words */
+        }
 
-      /* Spaces out our new system emojis nicely */
-      .emoji-icon {
-        margin-right: 12px;
-        font-size: 16px;
-      }
+        /* Action Event Element Blueprint */
+        .action-button {
+            background-color: #38bdf8; /* Vibrant cyan button interface */
+            color: #0b0f19;            /* High-contrast dark text inside the button */
+            border: none;              /* Removes default retro button bevel frames */
+            padding: 14px 20px;        /* Thick click surface spacing inside the frame boundary */
+            border-radius: 8px;        /* Smooth rounded operational corners */
+            font-family: inherit;      /* Forces button text to retain JetBrains Mono typography styling */
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;           /* Forces cursor to change to an interactive pointing hand on hover */
+            margin-top: auto;          /* Smart Layout rule: Pushes the button straight down to the absolute card base */
+            text-align: center;
+            text-decoration: none;     /* Suppresses standard web anchor text underlining mechanics */
+            transition: background 0.2s ease; /* Fluid color shifting physics during system interactions */
+        }
 
-      a {
-        display: block;            
-        text-align: center;        
-        margin-top: 25px;          
-        color: #38bdf8;
-        text-decoration: none;     
-        font-weight: bold;
-        border: 2px solid #38bdf8;
-        padding: 14px 20px;
-        border-radius: 8px;
-        background-color: #0f172a; 
-        transition: 0.25s ease-in-out; 
-      }
-      
-      a:hover {
-        background-color: #38bdf8;
-        color: #0f172a; 
-        cursor: pointer;           
-        box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); 
-      }
-
-      @media (max-width: 500px) {
-        body { padding: 10px; }
-        .profile-card { padding: 20px; margin: 10px auto; }
-        h1 { font-size: 20px; }
-      }
+        /* Hover Interaction State: Shoves visual feedback directly back to a user */
+        .action-button:hover {
+            background-color: #0ea5e9; /* Deepens the background color accent when hovered */
+        }
     </style>
-  </head>
-
-  <body>
+</head>
+<body>
 
     <div class="profile-card">
+        <h1>Berry's Forensics Lab</h1>
+        <p>Digital Forensics Analyst training platform and structural cybersecurity lab. System architecture monitoring enabled.</p>
 
-      <h1><span class="emoji-icon">🛡️</span>Berry's Forensics Lab</h1>
-      <h2>Cybersecurity Analyst / Looking forward to becoming a Digital Forensics Expert</h2>
+        <h3><span class="emoji-icon">💻</span>Core Focus</h3>
+        <ul>
+            <li><span class="emoji-icon">🔒</span>Cybersecurity</li>
+            <li><span class="emoji-icon">📊</span>Data Analysis</li>
+            <li><span class="emoji-icon">🖥️</span>SOC (Security Operations)</li>
+        </ul>
+        <h3 style="color: #38bdf8; margin-top: 25px;"><span class="emoji-icon">🛠️</span>Lab Utility: Check Pass Strength</h3>
       
-      <p>My love for tech drives me to wanna become an expert in it, and day by day i will✅.</p>
+      <input type="text" id="pass-input" placeholder="Type password to analyze..." style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #334155; background-color: #0f172a; color: #fff; font-family: inherit; box-sizing: border-box;">
       
-      <h3><span class="emoji-icon">💻</span>Core Skills</h3>
-      <ul>
-        <li><span class="emoji-icon">🔒</span>Cybersecurity</li>
-        <li><span class="emoji-icon">📊</span>Data Analysis</li>
-        <li><span class="emoji-icon">🖥️</span>SOC (Security Operations)</li>
-      </ul>
+      <div id="strength-output" style="margin-top: 10px; font-size: 13px; font-weight: bold; color: #94a3b8;">Status: Waiting for input...</div>
 
-      <a href="#" id="launch-btn">⚡ Launch Investigative Tools</a>
-
+        <a href="#" id="launch-btn" class="action-button">Launch Security Terminal</a>
     </div>
 
     <script>
+      const passInput = document.getElementById('pass-input');
+      const strengthOutput = document.getElementById('strength-output');
+
+      passInput.addEventListener('input', function() {
+        const password = passInput.value;
+        
+        if (password.length === 0) {
+          strengthOutput.textContent = "Status: Waiting for input...";
+          strengthOutput.style.color = "#94a3b8";
+        } else if (password.length < 6) {
+          strengthOutput.textContent = "❌ WEAK: Vulnerable to immediate brute force.";
+          strengthOutput.style.color = "#f43f5e";
+        } else if (password.length < 10) {
+          strengthOutput.textContent = "⚠️ MODERATE: Solid, but needs special characters.";
+          strengthOutput.style.color = "#fbbf24";
+        } else {
+          strengthOutput.textContent = "🛡️ SECURE: High structural complexity verified.";
+          strengthOutput.style.color = "#34d399";
+        }
+      });
+
       const button = document.getElementById('launch-btn');
       button.addEventListener('click', function(event) {
         event.preventDefault(); 
@@ -150,6 +156,5 @@
       });
     </script>
 
-  </body>
-
+</body>
 </html>
